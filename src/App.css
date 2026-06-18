@@ -1,0 +1,30 @@
+/* ── Main Layout Shell ── */
+.main-content {
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+/* ── Page Transition (optional) ── */
+.main-content > * {
+  animation: fadeIn var(--transition-normal);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive Padding ── */
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: var(--space-md) var(--space-sm);
+  }
+}

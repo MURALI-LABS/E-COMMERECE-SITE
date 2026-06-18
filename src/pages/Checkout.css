@@ -1,0 +1,132 @@
+.checkout {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.checkout h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.checkout__layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Delivery Details Card */
+.checkout__form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Inputs */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffd700;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255,215,0,0.4);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Payment Methods */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #ffd700;
+}
+
+.payment-option.active {
+  background: #fff8dc;
+  border-color: #ffd700;
+  color: #222;
+}
+
+/* Order Summary */
+.checkout__summary {
+  background: #111;
+  color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 100px;
+}
+
+.checkout__summary h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkout__total {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Place Order Button */
+.checkout__summary .btn {
+  width: 100%;
+  padding: 14px;
+  background: #ffd700;
+  color: #111;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.place-order-btn:hover {
+  transform: translateY(-2px);
+  background: #ffcc00;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .checkout__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
