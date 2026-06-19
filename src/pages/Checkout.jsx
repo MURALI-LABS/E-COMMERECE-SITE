@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useCart } from "../hooks/usecart";
+import { useCart } from "../hooks/useCart";
 import './Checkout.css'
 
 export default function Checkout() {
